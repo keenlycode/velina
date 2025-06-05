@@ -1,11 +1,18 @@
-import { Adapter } from "../../_lib/adapter.bundle.js";
+import { css } from '../../lib/adapter.bundle.js';
 
+interface LiftInteractionParam {
+  el: HTMLElement;
+  hover: string;
+  click: string;
+}
 
-export function liftInteraction(
-  el: Adapter,
-  hover: number = 1,
-  click: number = 0
-) {
-  const hoverTranslate = `translateY(-${hover}px)`;
-  const clickTranslate = `translateY(-${click}px)`;
+export function liftInteraction(param: LiftInteractionParam): string {
+  return css`
+    &:hover {
+      transform: translateY(-${param.hover});
+    }
+    &:active {
+      transform: translateY(-${param.click});
+    }
+  `.trim()
 }

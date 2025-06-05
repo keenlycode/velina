@@ -26,6 +26,7 @@
   },
   "homepage": "https://github.com/keenlycode/velina#readme",
   "dependencies": {
+    "animejs": "^4.0.2",
     "culori": "^4.0.1",
     "esbuild": "^0.25.5"
   }

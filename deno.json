@@ -6,6 +6,10 @@
   "tasks": {
     "dev": "deno run --watch main.ts"
   },
+  "compilerOptions": {
+    "allowJs": true,
+    "lib": ["dom", "dom.iterable", "dom.asynciterable", "deno.ns", "deno.unstable"]
+  },
   "unstable": ["sloppy-imports"],
   "lint": {
     "rules": {

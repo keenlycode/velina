@@ -1,4 +1,4 @@
-import { css } from '../../_lib/adapter.bundle.js';
+import { css } from '../../lib/adapter.bundle.js';
 
 export const fontFluid = ({
     vwMin = 400, vwMax = 1200,

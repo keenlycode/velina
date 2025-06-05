@@ -5,6 +5,7 @@
     "jsr:@devcapsule/stylis@0.1": "0.1.0",
     "jsr:@std/assert@1": "1.0.13",
     "jsr:@std/internal@^1.0.6": "1.0.8",
+    "npm:animejs@^4.0.2": "4.0.2",
     "npm:culori@^4.0.1": "4.0.1",
     "npm:esbuild@~0.25.5": "0.25.5"
   },
@@ -249,6 +250,9 @@
         "tslib"
       ]
     },
+    "animejs@4.0.2": {
+      "integrity": "sha512-f0L/kSya2RF23iMSF/VO01pMmLwlAFoiQeNAvBXhEyLzIPd2/QTBRatwGUqkVCC6seaAJYzAkGir55N4SL+h3A=="
+    },
     "culori@4.0.1": {
       "integrity": "sha512-LSnjA6HuIUOlkfKVbzi2OlToZE8OjFi667JWN9qNymXVXzGDmvuP60SSgC+e92sd7B7158f7Fy3Mb6rXS5EDPw=="
     },
@@ -295,6 +299,7 @@
     ],
     "packageJson": {
       "dependencies": [
+        "npm:animejs@^4.0.2",
         "npm:culori@^4.0.1",
         "npm:esbuild@~0.25.5"
       ]
