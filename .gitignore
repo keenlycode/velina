@@ -1,2 +1,6 @@
 .venv/
 node_modules/
+*.json
+!*.sample.json
+*.yaml
+!*.sample.yaml

@@ -2,12 +2,8 @@
   "name": "@velina/ui",
   "version": "0.0.1",
   "license": "MIT",
-  "exports": "./mod.ts",
-  "tasks": {
-    "dev": "deno run --watch main.ts"
-  },
+  "exports": "mod.ts",
   "compilerOptions": {
-    "allowJs": true,
     "lib": ["dom", "dom.iterable", "dom.asynciterable", "deno.ns", "deno.unstable"]
   },
   "unstable": ["sloppy-imports"],
