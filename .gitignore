@@ -1,6 +1,9 @@
 .venv/
 node_modules/
 *.json
+!deno.json
+!package.json
 !*.sample.json
 *.yaml
 !*.sample.yaml
+!pnpm-lock.yaml

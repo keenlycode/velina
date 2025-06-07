@@ -1,4 +1,3 @@
-
 import * as esbuild from 'esbuild';
 import glob from 'fast-glob';
 import path from 'node:path';
@@ -57,6 +56,7 @@ async function bundle() {
   console.log(await esbuild.analyzeMetafile(result.metafile))
 }
 
+
 async function build() {
   await bundle();
   const entries = await glob([
@@ -90,6 +90,7 @@ async function dev() {
   await ctx.watch();
   console.log('watching...', _glob)
 }
+
 
 if (import.meta.main) {
   if (Deno.args[0] === "bundle") {
