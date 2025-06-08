@@ -4,7 +4,7 @@ import path from 'node:path';
 
 
 const __dir = new URL('.', import.meta.url).pathname;
-const __dir_velina = path.join(__dir, 'velina');
+const __dir_velina = path.join(__dir, 'dist/');
 
 
 function _import_version_plugin(version?: string) {
@@ -36,11 +36,10 @@ const _esbuild_config = {
   keepNames: true,
   sourcemap: true,
   target: ['chrome124'],
-  outbase: 'src',
+  outbase: __dir_velina,
   outdir: 'dist',
   entryNames: '[dir]/[name]',
-  metafile: true,
-  plugins: [_import_version_plugin()]
+  metafile: true
 }
 
 
@@ -84,13 +83,13 @@ async function dev() {
   const ctx = await esbuild.context({
     entryPoints: entries,
     ..._esbuild_config,
-    metafile: false
+    metafile: false,
+    plugins: [_import_version_plugin()]
   });
 
   await ctx.watch();
   console.log('watching...', _glob)
 }
-
 
 if (import.meta.main) {
   if (Deno.args[0] === "bundle") {

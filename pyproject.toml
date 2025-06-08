@@ -1,0 +1,9 @@
+[project]
+name = "velina"
+version = "0.0.1"
+description = "UI Framework powered by Adapter CSS"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "engrave>=3.1.3",
+]
